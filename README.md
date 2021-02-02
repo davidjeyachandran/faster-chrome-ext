@@ -1,0 +1,1 @@
+# faster-chrome-ext
