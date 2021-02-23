@@ -2,7 +2,7 @@
     "name": "FasterWeb Extension",
     "short_name": "FasterWeb Ext",
     "description": "FasterWeb Testing Extension",
-    "version": "0.03",
+    "version": "0.6.11",
     "permissions": [
       "activeTab"
     ],
@@ -23,7 +23,8 @@
           "<all_urls>"
         ],
         "js": [
-          "faster.js"
+          "faster.js",
+          "fasterInit.js"
         ]
       }
     ],
