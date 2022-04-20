@@ -3,19 +3,83 @@
   overflow: hidden;
   /* This container should not have padding, borders, etc. */
 }
+
 .faster-visible {
   visibility: visible;
   opacity: 1;
   transition: opacity 2s linear;
 }
+
 .faster-hidden {
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s 2s, opacity 2s linear;
 }
 
-.faster-link {
-  /*background-color: lime;*/
+/* .faster-link {
   cursor: url('https://fasterweb.io/img/cursor-rocket.png'), auto;
-  border: 1px solid orange;
+} */
+
+/* Tooltip container */
+.faster-link {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.faster-link .tooltiptext {
+  visibility: visible;
+  opacity: 0.4;
+  width: 50px;
+  background-color: #333333;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 10;
+  top: 110%;
+  left: 50%;
+  margin-left: -60px;
+  /* Use half of the width (120/2 = 60), to center the tooltip */
+
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.faster-link:hover .tooltiptext {
+  width: 100px;
+  opacity: 1;
+}
+
+.faster-link:hover .tooltiptext .description {
+  opacity: 1;
+}
+
+/* Add an arrow to the tooltip */
+.faster-link .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  /* At the top of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.faster-link .tooltiptext .description {
+  padding-top: 2px;
+  opacity: 0;
+  width: 100px;
+  font-size: 11px;
+  text-transform: none;
+  color: lightblue;
 }

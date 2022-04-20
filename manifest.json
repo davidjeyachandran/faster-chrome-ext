@@ -25,6 +25,9 @@
         "js": [
           "faster.js",
           "fasterInit.js"
+        ],
+        "css": [
+          "faster.css"
         ]
       }
     ],
